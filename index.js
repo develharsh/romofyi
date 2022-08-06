@@ -21,7 +21,7 @@ app.use("/test", (req, res) => {
   ) => res.status(200).json({ success: true, message: "API Check" })
 );*/
 
-app.use(express.static(path.join(__dirname, "./")));
+app.use(express.static(path.join(__dirname, "public")));
 app.use((_, res) => {
   res.sendFile(path.resolve(__dirname, "./"));
 });
